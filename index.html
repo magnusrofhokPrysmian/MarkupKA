@@ -18,7 +18,8 @@
 <body>
 	<div class="header">
 	<h1>Längdpåslag för KA</h1>
-	<!--<input type="file" id="jsonFile" accept=".json" style="height: 20px;" >-->
+	<p>20170222, 20359016, 20102215, 20115022</p>
+	<input type="file" id="jsonFile" accept=".json" style="height: 20px;" >
 	<button onclick="resetForm()">Återställ</button>
 	<button onclick="window.location.href='editMode.html'">Lägg Till / Ta bort</button>
 	<div class="theme-toggle">
@@ -36,7 +37,6 @@
             <p>Artikelnummer</p>
             <input class="artikelnummer" id="artikelnummer" placeholder="Fyll i artikelnummer">
         </div>
-
         <div class="calculatedNumbers">
 			<p>Benämning</p>
             <p id="output"></p>
@@ -71,6 +71,7 @@
 	</div>
 </div>
 <div class="bottomHeader"></div>
+		<script src="articles.js"></script>
 		<script src="script.js"></script>
 </body>
 </html>

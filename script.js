@@ -59,228 +59,228 @@ function parseType(text){
 }
 const breakpoints = [
   500,1000,2000,3000,4000,5000,6000,7000,8000,9000,
-  10000,11000,12000,15000,18000,20000,25000,Infinity
+  10000,11000,12000,15000,20000,25000,Infinity
 ];
-const markupTables = { //120 area is not complete, change it
-	10: {
-		"MSP 3-ledare HS->EM": [
-		100,100,100,100,100,100,100,100,100,100,100,100,100,100,"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]},
-	16: {
-		"1kV": [
-		105,105,105,105,105,105,105,105,105,105,105,105,105,105,"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]
-},
-	25: {
-		"1 kV": [
-		105,105,105,105,105,105,105,105,105,105,105,105,105,150,
-		"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-		"MSP 3-ledare HS->EM": [
-		65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-		"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-		"MSP 3-ledare EM->HS": [
-		65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-		"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-		"MSP 1-ledare": [
-		130,130,130,130,130,130,130,130,130,130,130,130,
-		"Längdberedning","Längdberedning",
-		"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]
-},
-	35: {
-		"1 kV": [
-			105,105,105,105,105,105,105,105,105,105,105,105,105,105,
-			"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-		],
-
-		"MSP 3-ledare HS->EM": [
-			65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-			"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-		],
-
-		"MSP 3-ledare EM->HS": [
-			65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-			"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-		],
-
-		"MSP 1-ledare": [
-			50,50,50,50,80,80,80,110,110,110,140,140,140,170,
-			"Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-		]
-},
-	50: {
+const markupTables = {
+	10:  {
+		 "MSP 3-ledare HS->EM": [
+		 100,100,100,100,100,100,100,100,100,100,100,100,100,100,"Längdberedning","Längdberedning","Längdberedning"
+    ]},  
+	16:  {
+		 "1 kV": [
+		 105,105,105,105,105,105,105,105,105,105,105,105,105,105,"Längdberedning","Längdberedning","Längdberedning"
+    ]    
+},       
+	25:  {
+		 "1 kV": [
+		 105,105,105,105,105,105,105,105,105,105,105,105,105,150,
+		 "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 "MSP 3-ledare HS->EM": [
+		 65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+		 "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 "MSP 3-ledare EM->HS": [
+		 65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+		 "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 "MSP 1-ledare": [
+		 130,130,130,130,130,130,130,130,130,130,130,130,
+		 "Längdberedning","Längdberedning",
+		 "Längdberedning","Längdberedning","Längdberedning"
+    ]    
+},       
+	35:  {
+		 "1 kV": [
+		 	105,105,105,105,105,105,105,105,105,105,105,105,105,105,
+		 	"Längdberedning","Längdberedning","Längdberedning"
+		 ],
+		 
+		 "MSP 3-ledare HS->EM": [
+		 	65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+		 	"Längdberedning","Längdberedning","Längdberedning"
+		 ],
+		 
+		 "MSP 3-ledare EM->HS": [
+		 	65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+		 	"Längdberedning","Längdberedning","Längdberedning"
+		 ],
+		 
+		 "MSP 1-ledare": [
+		 	50,50,50,50,80,80,80,110,110,110,140,140,140,170,
+		 	"Längdberedning","Längdberedning","Längdberedning"
+		 ]
+},       
+	50:  {
     "1 kV": [
-        70,70,70,70,70,70,85,85,85,85,110,110,110,110,
-        "Längdberedning",120,"Längdberedning","Längdberedning"
-    ],
-
+         70,70,70,70,70,70,85,85,85,85,110,110,110,110,
+         "Längdberedning",120,"Längdberedning"
+    ],   
+		 
     "MSP 3-ledare HS->EM": [
-        60,60,60,60,110,110,110,165,165,165,210,210,210,275,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
+         60,60,60,60,110,110,110,165,165,165,210,210,210,275,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 
     "MSP 3-ledare EM->HS": [
-        60,60,60,60,110,110,110,165,165,165,210,210,210,275,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
+         60,60,60,60,110,110,110,165,165,165,210,210,210,275,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 
     "MSP 1-ledare": [
-        60,60,60,60,60,60,60,90,90,90,120,120,120,130,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]
-},
-	70: {
+         60,60,60,60,60,60,60,90,90,90,120,120,120,130,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ]    
+},       
+	70:  {
     "1 kV": [
-        70,70,70,70,70,70,85,85,85,85,110,110,110,110,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
+         70,70,70,70,70,70,85,85,85,85,110,110,110,110,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 
     "MSP 3-ledare HS->EM": [
-        65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
+         65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 
     "MSP 3-ledare EM->HS": [
-        65,65,65,65,90,90,100,100,120,120,140,140,160,160,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
+         65,65,65,65,90,90,100,100,120,120,140,140,160,160,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ],   
+		 
     "MSP 1-ledare": [
-        50,50,50,50,80,80,80,110,110,110,140,140,140,170,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]
-},
-	95: {
+         50,50,50,50,80,80,80,110,110,110,140,140,140,170,
+         "Längdberedning","Längdberedning","Längdberedning"
+    ]    
+},       
+	95:  {
     "1 kV": [
         70,70,70,70,70,70,85,95,95,95,110,110,110,220,
-        220,220,220,"Längdberedning"
+        220,220,"Längdberedning"
     ],
 
     "MSP 3-ledare HS->EM": [
         60,60,60,80,100,120,140,160,180,200,200,200,200,200,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare EM->HS": [
         70,70,70,70,100,100,100,140,140,140,180,180,180,210,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 1-ledare": [
         50,50,50,50,80,80,80,110,110,110,140,140,140,170,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	120: {
     "1 kV": [
         70,70,70,70,70,70,85,95,95,95,110,110,110,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare HS->EM": [
-        70,70,70,1000,100,140,140,160,180,200,250,250,250,300,
-        "Längdberedning",350,"Längdberedning","Längdberedning"
+        70,70,70,100,100,140,140,180,180,250,250,250,250,300,
+        420,"Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare EM->HS": [
-        70,70,70,80,100,120,140,160,180,200,250,250,250,300,
-        "Längdberedning",350,"Längdberedning","Längdberedning"
+        70,70,70,100,100,140,140,180,180,250,250,250,250,300,
+        420,"Längdberedning","Längdberedning"
     ],
 
     "MSP 1-ledare": [
         70,70,70,70,100,120,140,160,180,200,250,250,250,300,
-        "Längdberedning",350,"Längdberedning","Längdberedning"
+        420,"Längdberedning","Längdberedning"
     ]
 },
 	150: {
     "1 kV": [
         45,45,45,45,70,70,70,95,95,95,120,120,120,150,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
-    "MSP 3-ledare HS->EM": [
-        60,60,60,80,100,120,140,160,180,200,250,250,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
-    "MSP 3-ledare EM->HS": [
-        70,70,70,70,100,100,100,140,140,140,180,180,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ],
-
-    "MSP 1-ledare": [
-        70,70,70,70,100,100,100,140,140,140,180,180,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
-    ]
-},
-	185: {
-    "1 kV": [
-        45,45,45,45,70,70,70,95,95,95,120,120,120,150,150,
         "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare HS->EM": [
-        60,60,60,80,100,120,140,160,180,200,250,250,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        70,70,70,100,100,140,140,180,180,250,250,250,270,300,
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare EM->HS": [
-        60,60,60,80,100,120,140,160,180,200,250,250,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        70,70,70,100,100,140,140,180,180,250,250,250,270,300,
+        "Längdberedning","Längdberedning","Längdberedning"
+    ],
+
+    "MSP 1-ledare": [
+        70,70,70,70,100,100,100,140,140,140,180,180,270,300,
+        "Längdberedning","Längdberedning","Längdberedning"
+    ]
+},
+	185: {
+    "1 kV": [
+        45,45,45,45,70,70,70,95,95,95,120,120,120,120,150,
+        "Längdberedning","Längdberedning"
+    ],
+
+    "MSP 3-ledare HS->EM": [
+        70,70,70,100,100,140,140,180,180,250,250,250,270,300,
+        "Längdberedning","Längdberedning","Längdberedning"
+    ],
+
+    "MSP 3-ledare EM->HS": [
+        70,70,70,100,100,140,140,180,180,250,250,250,270,300,
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 1-ledare": [
         60,60,60,80,100,120,140,160,180,200,250,250,270,300,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	240: {
     "1 kV": [
         55,55,55,65,65,65,85,130,130,130,130,
         "Längdberedning","Längdberedning","Längdberedning",
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare HS->EM": [
         60,60,60,80,100,120,120,160,180,200,240,240,240,280,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare EM->HS": [
         70,70,70,80,100,120,120,160,180,200,240,240,240,280,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 1-ledare": [
         70,70,70,80,100,120,140,160,180,200,240,240,240,280,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	300: {
     "1 kV": [
         55,55,55,70,70,70,90,130,130,130,130,
         "Längdberedning","Längdberedning","Längdberedning",
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning"
     ],
 
     "MSP 3-ledare HS->EM": [
-        70,70,70,100,100,120,140,160,180,200,220,240,
+        50,50,80,110,140,170,200,230,260,290,320,350,
         "Längdberedning","Längdberedning","Längdberedning","Längdberedning",
-        "Längdberedning","Längdberedning"
+        "Längdberedning"
     ],
 
     "MSP 3-ledare EM->HS": [
-        70,70,70,100,100,140,140,180,180,210,210,240,
+        50,50,80,110,140,170,200,230,260,290,320,350,
         "Längdberedning","Längdberedning","Längdberedning","Längdberedning",
-        "Längdberedning","Längdberedning"
+        "Längdberedning"
     ],
 
     "MSP 1-ledare": [
-        70,70,70,100,100,140,140,180,180,210,210,240,200,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        70,70,70,100,100,140,140,180,180,210,210,240,240,
+        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	400: {
@@ -291,70 +291,52 @@ const markupTables = { //120 area is not complete, change it
 },
 	500: {
     "MSP 1-ledare": [
-        80,80,80,140,170,200,200,200,230,260,260,260,290,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        60,60,60,100,100,140,140,180,180,220,220,260,260,
+        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	630: {
     "MSP 1-ledare": [
-        80,80,80,140,170,200,200,200,230,260,260,260,290,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        60,60,60,100,100,140,140,180,180,220,220,260,260,
+        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
     ]
 },
 	800: {
     "MSP 1-ledare": [
         80,80,80,140,170,200,200,200,230,260,260,260,290,
-        "Längdberedning","Längdberedning","Längdberedning","Längdberedning","Längdberedning"
+        "Längdberedning","Längdberedning","Längdberedning","Längdberedning"
     ]
 }
 };
-const db = new PouchDB("Material-db");
-//Import from JSON file.
-const addArticleJSON = document.getElementById("jsonFile");
-if(addArticleJSON) {
-	addArticleJSON.addEventListener("change", async (event) => {
-	const file = event.target.files[0];
-	const text = await file.text();
-	const data = JSON.parse(text);
-	const docs = await Promise.all(data.map(async item => {
-		let existing;
-	try {
-		existing = await db.get(item.Material.toString());
-	}catch (e) {
-		existing = null;
-	}
-		const parsed = parseCableSize(item["D. SE"]);
-		const voltage = parseVoltage(item["D. SE"]);
-		const cableType = parseType(item["D. SE"]);
+
+//Replacing pouchDB with Hardcoded tables.
+	
+function processArticleTable() {
+	const docs = articleTable.map(item => {
+		const parsed = parseCableSize(item.Description);
+		const voltage = parseVoltage(item.Description);
+		const cableType = parseType(item.Description);
 		return {
-		_id: item.Material.toString(),
-		_rev: existing?._rev,
-		...item,
-		Cores: parsed?.cores || null,
-		SizeMain: parsed?.size || null,
-		SizeScreen: parsed?.screen || null,
-		Voltage: voltage ?? null,
-		CableType: cableType ?? null
-		};
-	})
-	);
-	await db.bulkDocs(docs);
-	console.log("Import complete!");
+			... item,
+			Cores: parsed?.cores || null,
+			SizeMain: parsed?.size || null,
+			SizeScreen: parsed?.screen || null,
+			Voltage: voltage ?? null,
+			CableType: cableType ?? null
+		}
 	});
+	window.parsedArticles = docs;
+	console.log("Parsed articleTable:" , docs);
+	return docs;
 }
-//Lookup from db
-async function lookupArticle(materialNumber) {
-    try {
-        const doc = await db.get(materialNumber.toString());
-		console.log(doc);
-        return doc;
-    } catch (err) {
-        if (err.status === 404) return null;
-        console.error(err);
-        return null;
-    }
+processArticleTable();
+
+function lookupArticle(materialNumber) {
+	const num = Number(materialNumber);
+	return window.parsedArticles.find(a => a.Articlenumber === num) || null;
 }
-//Add to db
+
+//Add to db (Not used yet)
 const addMaterialToDBbutton = document.getElementById("addMaterialToDB");
 if(addMaterialToDBbutton){
 	addMaterialToDBbutton.addEventListener("click", async () => {
@@ -399,7 +381,7 @@ if(addMaterialToDBbutton){
 		document.getElementById("benmäningEditmode").value = "";
 	});
 }
-//Remove from DB
+//Remove from DB (Not used yet)
 const deleteFromDBbutton = document.getElementById("removeFromDB");
 if(deleteFromDBbutton) {
 	deleteFromDBbutton.addEventListener("click", async () => {
@@ -469,9 +451,9 @@ safeQuery(".artikelnummer", (input) => {
     input.addEventListener("input", async function () {
         const value = this.value.trim();
         if (!value) return;
-        const doc = await lookupArticle(value);
+        const doc = lookupArticle(value);
         if (doc) {
-            document.getElementById("output").textContent = doc["D. SE"] || "";
+            document.getElementById("output").textContent = doc.Description || "";
             document.getElementById("valdTyp").value = doc.CableType || "";
         } else {
             document.getElementById("output").textContent = "Finns Ej";
