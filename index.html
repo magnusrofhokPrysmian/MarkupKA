@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		const savedTheme = localStorage.getItem('calculatorTheme');
+		if (savedTheme === 'light') {
+			document.documentElement.classList.add('light-theme');
+		}
+	</script>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="theme-color" content="#202124">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.jsdelivr.net/npm/pouchdb@8.0.1/dist/pouchdb.min.js"></script>
+    <title>Längdpåslag KA</title> 
+	<link rel="icon" type="image/x-icon" href="drum.png"</link>
+</head>
+<body>
+	<div class="header">
+	<h1>Längdpåslag för KA</h1>
+	<p>20170222, 20359016, 20102215, 20115022</p>
+	<!-- <input type="file" id="jsonFile" accept=".json" style="height: 20px;" > -->
+	<button onclick="resetForm()">Återställ</button>
+	<button onclick="window.location.href='editMode.html'">Lägg Till / Ta bort</button>
+	<div class="theme-toggle">
+			<label class="switch">
+			<input type="checkbox" id="theme-switch">
+			<span class="slider round"></span>
+			<span class="theme-icon light">L</span>
+			<span class="theme-icon dark">D</span>
+		</label>
+		</div>
+	</div>
+	<div class="container">
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Artikelnummer</p>
+            <input class="artikelnummer" id="artikelnummer" placeholder="Fyll i artikelnummer">
+        </div>
+
+        <div class="calculatedNumbers">
+			<p>Benämning</p>
+            <p id="output"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Orderlängd</p>
+            <input class="orderLength" id="orderLength" placeholder="Fyll i orderlängd">
+        </div>
+		<div class="calculatedNumbers">
+			<p>Påslag</p>
+            <p id="outputMarkup"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Typ</p>
+            <select id="valdTyp">
+				<option value="" selected></option>
+				<option value="1 kV">1kV</option>
+                <option value="MSP 3-ledare HS->EM">MSP 3-ledare HS->EM</option>
+                <option value="MSP 3-ledare EM->HS">MSP 3-ledare EM->HS</option>
+                <option value="MSP 1-ledare">MSP 1-ledare</option>
+            </select>
+        </div>
+		<div class="calculatedNumbers">
+			<p>Start / Mellan / Slut</p>
+            <p id="outputMarkupStartStop" type="number"></p>
+        </div>
+    </div>
+	</div>
+</div>
+<div class="bottomHeader"></div>
+		<script src="script.js"></script>
+</body>
+</html>
+
+
+
+
