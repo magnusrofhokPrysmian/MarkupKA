@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		const savedTheme = localStorage.getItem('calculatorTheme');
+		if (savedTheme === 'light') {
+			document.documentElement.classList.add('light-theme');
+		}
+	</script>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="source/styles.css">
+	<meta name="theme-color" content="#202124">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Längdpåslag KA</title> 
+	<link rel="icon" type="image/x-icon" href="source/drum.png"</link>
+</head>
+<body>
+	<div class="header">
+	<h1>Längdpåslag för KA</h1>
+	<button onclick="resetForm()">Återställ</button>
+		<div class="theme-toggle">
+			<label class="switch">
+			<input type="checkbox" id="theme-switch">
+			<span class="slider round"></span>
+			<span class="theme-icon light">L</span>
+			<span class="theme-icon dark">D</span>
+		</label>
+		</div>
+	</div>
+	<div class="container">
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Area</p>
+			<select id="artikelnummer">
+				<option value="1" selected>Välj area</option>
+				<option value="10">10</option>
+                <option value="16">16</option>
+                <option value="25">25</option>
+                <option value="35">35</option>
+				<option value="50">50</option>
+				<option value="70">70</option>
+				<option value="95">95</option>
+				<option value="120">120</option>
+				<option value="150">150</option>
+				<option value="185">185</option>
+				<option value="240">240</option>
+				<option value="300">300</option>
+				<option value="400">400</option>
+				<option value="500">500</option>
+				<option value="630">630</option>
+				<option value="800">800</option>
+            </select>
+        </div>
+        <div class="calculatedNumbers">
+			<p></p>
+            <p id="output"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Trumlängd</p>
+            <input class="orderLength" id="orderLength" placeholder="Fyll i önskad trumlängd">
+        </div>
+		<div class="calculatedNumbers">
+			<p>Påslag</p>
+            <p id="outputMarkup"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Typ</p>
+            <select id="valdTyp">
+				<option value="1" selected>Välj typ</option>
+				<option value="1 kV">1kV</option>
+                <option value="MSP 3-ledare HS->EM">MSP 3-ledare HS->EM</option>
+                <option value="MSP 3-ledare EM->HS">MSP 3-ledare EM->HS</option>
+                <option value="MSP 1-ledare">MSP 1-ledare</option>
+            </select>
+        </div>
+		<div class="calculatedNumbers">
+			<p>Start / Mellan / Slut</p>
+            <p id="outputMarkupStartStop" type="number"></p>
+        </div>
+		<div class="calculatedNumbers" style="margin-left: 300px">
+			<p>HS->EM = (3x1) AXALJ-TT, AXCLJ-TT, AXLJ-RMF, AXQJ-TT Pure TSLI, AXQJ-RMF Pure.</p>
+			<p>EM->HS = (3x1xArea) AXLJ-TTCL TSLF, AHXAMK-W.</p>
+        </div>
+    </div>
+	<div class="row">
+        <div class="inputNumbersLeftSide">
+            <p>Maskin</p>
+            <select id="valdMaskin">
+				<option value="" selected>Välj vilken EP maskin:</option>
+				<option value="ep40">EP40</option>
+                <option value="ep41">EP41</option>
+                <option value="ep4344">EP43 / 44</option>
+            </select>
+        </div>
+		<div class="calculatedNumbers">
+			<p>Typer som AMLJ-TT, AMALJ-TT, AMCLJ-TT, ARP1H5E går i EP41.</p>
+        </div>
+	</div>
+</div>
+<div class="bottomHeader"></div>
+		<script src="source/script.js"></script>
+</body>
+</html>
+
+
+
+
