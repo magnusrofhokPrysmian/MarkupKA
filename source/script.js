@@ -284,12 +284,10 @@ const markupMachineTable = {
 		default: [85, 70]
 	}
 }
-
 function updateMachineScrap(area, machine) {
-	if(!machine) return;
+	if(!machine | !area) return;
 	return markupMachineTable[machine]?.[area] || markupMachineTable[machine].default;
 }
-
 let updateTimer = null;
 async function updateMarkup() {
 	clearTimeout(updateTimer);
@@ -297,12 +295,12 @@ async function updateMarkup() {
 		const machine = document.getElementById("valdMaskin").value;
 		const crossection = document.getElementById("artikelnummer").value;
 		const type = document.getElementById("valdTyp").value;
-		const length  = Number(document.querySelector(".orderLength").value.trim());
+		const length = Number(document.querySelector(".orderLength").value.trim());
 		const markup = await getMarkup(crossection, type, length);
+		if(!length || !machine || !markup || !crossection || !type) { return; }
 		const machineScrap = updateMachineScrap(crossection, machine);
 		document.getElementById("outputMarkup").textContent = markup || "";
 		document.getElementById("outputMarkupStartStop").textContent = "";
-		if(!length | !machine | !markup ) { return; }
 		if(markup === "Längdberedning")
 			{ 
 				document.getElementById("outputMarkupStartStop").textContent = "";
